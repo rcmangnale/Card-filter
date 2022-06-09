@@ -1,4 +1,4 @@
-import { Result } from "postcss";
+
 import React, { useState } from "react";
 import Categories from "./Categories";
 
@@ -78,7 +78,7 @@ setData(Result)
           </button>
         </div>
       </header>
-      <main>
+      <main className="grid  lg:grid-cols-3">
         
           {data.map((values) => {
             const {id, title, image} = values;
@@ -86,18 +86,18 @@ setData(Result)
               <>
               <div class="container my-12 mx-auto px-4 md:px-12" key={id}>
                 <div class=" -mx-1 lg:-mx-4 grid grid-cols-3" >
-                  <div class="my-1 px-1 w-72  lg:my-4 lg:px-4 ">
+                  <div class="my-1 px-1 w-96  lg:my-4 lg:px-4 ">
                     <article class="overflow-hidden rounded-lg shadow-xl">
                       <a href="#picture">
                         <img
                           alt="Placeholder"
-                          class="block h-40 w-72"
+                          class="block h-40 w-96"
                           src={image}
                         />
                       </a>
 
                       <header class="flex items-center justify-between leading-tight p-2 md:p-4 bg-black text-white">
-                        <h1 class="text-2xl">
+                        <h1 class="text-xl">
                           <a
                             class="no-underline hover:underline "
                             href="#title"
@@ -114,135 +114,7 @@ setData(Result)
                       </footer>
                     </article>
                   </div>
-                  {/* <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-            <article class="overflow-hidden rounded-lg shadow-xl">
-              <a href="#picture">
-                <img
-                  alt="Placeholder"
-                  class="block h-40 w-full"
-                  src="https://picsum.photos/600/400/?random" />
-              </a>
-
-              <header class="flex items-center justify-between leading-tight p-2 md:p-4 bg-black text-white">
-                <h1 class="lg:text-2xl text-xl">
-                  <a class="no-underline hover:underline " href="#title">
-                    The Vincent Van Dough gallery
-                  </a>
-                </h1>
-              </header>
-
-              <footer class=" leading-none p-2 md:p-4 bg-black text-white">
-                <button class="bg-neutral-800 w-36 hover:bg-white text-white font-semibold hover:text-black py-2 px-2   hover:border-transparent rounded">
-                  @OxOfeae
-                  0xOfDear...
-                </button>
-              </footer>
-            </article>
-          </div>
-          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-            <article class="overflow-hidden rounded-lg shadow-xl">
-              <a href="#picture">
-                <img
-                  alt="Placeholder"
-                  class="block h-40 w-full"
-                  src="https://picsum.photos/600/400/?random" />
-              </a>
-
-              <header class="flex items-center justify-between leading-tight p-2 md:p-4 bg-black text-white">
-                <h1 class="text-2xl">
-                  <a class="no-underline hover:underline " href="#title">
-                    Teufzer
-                  </a>
-                </h1>
-              </header>
-
-              <footer class=" leading-none p-2 md:p-4 bg-black text-white">
-                <button class="bg-neutral-800 w-36 hover:bg-white text-white font-semibold hover:text-black py-2 px-2   hover:border-transparent rounded">
-                  @teufeurs
-                  0xdec76...
-                </button>
-              </footer>
-            </article>
-          </div>
-          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-            <article class="overflow-hidden rounded-lg shadow-xl">
-              <a href="#picture">
-                <img
-                  alt="Placeholder"
-                  class="block h-40 w-full"
-                  src="https://picsum.photos/600/400/?random" />
-              </a>
-
-              <header class="flex items-center justify-between leading-tight p-2 md:p-4 bg-black text-white">
-                <h1 class="text-2xl">
-                  <a class="no-underline hover:underline " href="#title">
-                    6529 AB + 1
-                  </a>
-                </h1>
-              </header>
-
-              <footer class=" leading-none p-2 md:p-4 bg-black text-white">
-                <button class="bg-neutral-800 w-36 hover:bg-white text-white font-semibold hover:text-black py-2 px-2   hover:border-transparent rounded">
-                  @6529.
-                  0xfd2200...
-                </button>
-              </footer>
-            </article>
-          </div>
-          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-            <article class="overflow-hidden rounded-lg shadow-xl">
-              <a href="#picture">
-                <img
-                  alt="Placeholder"
-                  class="block h-40 w-full"
-                  src="https://picsum.photos/600/400/?random" />
-              </a>
-
-              <header class="flex items-center justify-between leading-tight p-2 md:p-4 bg-black text-white">
-                <h1 class="text-2xl">
-                  <a class="no-underline hover:underline " href="#title">
-                    #9049
-                  </a>
-                </h1>
-              </header>
-
-              <footer class=" leading-none p-2 md:p-4 bg-black text-white">
-                <button class="bg-neutral-800 w-36 hover:bg-white text-white font-semibold hover:text-black py-2 px-2   hover:border-transparent rounded">
-                  @rskagy
-                  0x83fcf5...
-                </button>
-              </footer>
-            </article>
-          </div>
-          <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-            <article class="overflow-hidden rounded-lg shadow-xl">
-              <a href="#picture">
-                <img
-                  alt="Placeholder"
-                  class="block h-40 w-full"
-                  src="https://picsum.photos/600/400/?random" />
-              </a>
-
-              <header class="flex items-center justify-between leading-tight p-2 md:p-4 bg-black text-white">
-                <h1 class="text-2xl">
-                  <a class="no-underline hover:underline " href="#title">
-                    6529 Photo A
-                  </a>
-                </h1>
-              </header>
-
-              <footer class=" leading-none p-2 md:p-4 bg-black text-white gap-3 flex ">
-                <button class="bg-neutral-800 w-36 hover:bg-white text-white font-semibold hover:text-black py-2 px-2   hover:border-transparent rounded">
-                  @6529...
-                  0xfd2200..
-                </button>
-                <button class="bg-neutral-800 w-36 hover:bg-white text-white font-semibold hover:text-black py-2 px-2   hover:border-transparent rounded">
-                  @mintface
-                  0xdd6b80..
-                </button>
-              </footer>
-            </article>
-          </div> */}
+                 
                 </div>
                 </div>
               </>

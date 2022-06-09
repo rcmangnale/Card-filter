@@ -78,7 +78,7 @@ setData(Result)
           </button>
         </div>
       </header>
-      <main className="grid  lg:grid-cols-3">
+      <main className="grid lg:grid-cols-3">
         
           {data.map((values) => {
             const {id, title, image} = values;
@@ -90,7 +90,7 @@ setData(Result)
                     <article class="overflow-hidden rounded-lg shadow-xl">
                       <a href="#picture">
                         <img
-                          alt="Placeholder"
+                          alt="Loadingimage..."
                           class="block h-40 w-96"
                           src={image}
                         />
